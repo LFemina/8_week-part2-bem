@@ -1,0 +1,151 @@
+.container {
+    width: 100%;
+    margin: 0;
+    font-family: 'DM Sans', Roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.4vh;
+}
+
+.container_header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    height: 10vh;
+    background-color: #F5EDE7;
+}
+
+.container_header-logo {
+    margin-left: 15%;
+}
+
+.container_header-nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-menu {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container_header-login {
+    display: flex;
+    justify-content: center;
+}
+
+.container_main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: #FFC3A0;
+    height: 79vh;
+}
+
+.container_main-aside {
+    margin-left: 5%;
+    align-content: center;
+}
+
+.aside-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.btn {
+    background: #FFC3A0;
+    border-radius: 50px;
+    width: 15em;
+    height: 3em;
+}
+
+.container_main-sidebar {
+    width: 90%;
+    align-content: center;
+    margin-left: 8%;
+}
+
+.sidebar-img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.container_footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-content: center;
+    text-align: center;
+    font-size: larger;
+    height: 10vh;
+    background-color: #F5EDE7;
+}
+
+a:link {
+    color: black;
+}
+
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: blue;
+}
+
+@media screen and (max-width: 600px) {
+    .container_header {
+        height: 15vh;
+        grid-template-areas: 
+        "container_header container_header container_header"
+        "container_header-nav container_header-nav container_header-login";
+    }
+
+    .container_header {
+        grid-area: container_header;
+    }
+
+    .header-logo {
+        width: 5em;
+    }
+    .container_header-nav {
+        grid-area: container_header-nav;
+    }
+    
+    .container_header-login {
+    grid-area: container_header-login;
+}
+
+    .container_main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        height: 73vh;
+    }
+
+    .aside-header {
+        text-align: center;
+    }
+
+    .aside-btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 1em;
+    }
+
+    .container_main-sidebar {
+        margin-left: 6%;
+        margin-top: 2%;
+        width: 70%;
+    }
+
+    .sidebar-img {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 15%;
+    }
+
+    .container_footer {
+        height: 12vh;
+    }    
+}
